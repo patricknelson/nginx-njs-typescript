@@ -1,0 +1,13 @@
+#
+# SSH into GCC and, instead of cloning using mercurial (hg) you can use git instead via https://github.com/nginx/njs
+
+# Using docker-compose since it makes it much easier for us Windows users to mount volumes consistently.
+
+
+version: '3'
+services:
+  gcc:
+    image: gcc
+    entrypoint: sh -c 'chmod +x /export/build.sh && /export/build.sh'
+    volumes:
+      - .:/export
