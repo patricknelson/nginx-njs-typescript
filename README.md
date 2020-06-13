@@ -16,11 +16,15 @@ https://github.com/patricknelson/nginx-njs-typescript/archive/master.zip
 1. Get docker: https://docs.docker.com/get-docker/
 1. Run the following commands:
     ```
+    # Get this project
     git clone git@github.com:patricknelson/nginx-njs-typescript.git
     cd nginx-njs-typescript
+
+    # Build and clean up temporary container once completed
     docker-compose up
+    docker-compose down
     ```
-1. Copy the files out of the `dist/` directory into your project.
+1. Copy the generated `*.ts` files out of the `dist/` directory and into your own project.
 
 ## License
 
