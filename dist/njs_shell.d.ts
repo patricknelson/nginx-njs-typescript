@@ -1,9 +1,11 @@
-/// <reference path="njs_core.d.ts" />
+/// <reference path="index.d.ts" />
 
 interface Console {
     log(...args: any[]): void;
     dump(...args: any[]): void;
 
-    time(label?: NjsStringLike): void;
-    timeEnd(label?: NjsStringLike): void;
+    time(label?: string): void;
+    timeEnd(label?: string): void;
 }
+
+declare const console: Console;
